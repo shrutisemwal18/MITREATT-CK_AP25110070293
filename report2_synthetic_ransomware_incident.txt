@@ -1,0 +1,7 @@
+SYNTHETIC SAMPLE REPORT (written for this project, not a real incident).
+
+The attackers gained access through an internet-facing VPN appliance by exploiting a vulnerability that allowed remote code execution. They then logged in with compromised credentials to blend in with legitimate administrators.
+
+Within hours, a password spraying attack was run against internal accounts. The operators scanned the network to find other hosts on the network and moved laterally by copying tools to admin shares and running them with PsExec. A legitimate remote access tool, AnyDesk, was installed so they could keep access.
+
+Before deploying the payload, the operators disabled Windows Defender and stopped services related to backup software. They ran vssadmin to delete shadow copies so that victims could not restore files. The ransomware then encrypts files across file servers and drops a ransom note in every folder. Event logs were cleared on the affected servers to hinder the investigation.

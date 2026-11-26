@@ -1,0 +1,9 @@
+SYNTHETIC SAMPLE REPORT (written for this project, not a real incident).
+
+The intrusion started with spearphishing emails sent to finance staff. Each email carried a malicious attachment, a macro enabled Word document themed as an invoice. When the user opened the file, a macro launched PowerShell with an encoded command. The script downloaded a second stage from a remote server using certutil.
+
+The implant copied itself to a folder that looks like a legitimate Windows component and created a scheduled task so it would survive reboots. It also wrote a value under the Run key as a fallback. The payload is base64 encoded and the configuration is decrypted only in memory.
+
+After gaining a foothold, the operators dumped credentials from LSASS memory and used the stolen credentials to connect to other servers over Remote Desktop. They enumerated running processes and collected the computer name and OS version of each host.
+
+Documents were collected and compressed into a password protected RAR archive. The archive was uploaded to a cloud storage account controlled by the actors. Command and control traffic used HTTPS POST requests that blend in with normal web traffic. Finally, the dropper removes itself from disk once the implant is running.

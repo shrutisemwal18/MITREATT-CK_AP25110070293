@@ -1,0 +1,35 @@
+id,passage,gold_technique
+1,The campaign began with spearphishing emails that carried a weaponized Word document as an attachment.,T1566.001
+2,"Victims received a message urging them to click the link, which led to a fake login page used for credential harvesting.",T1566.002
+3,The actors exploited a vulnerability in the company's internet-facing web server to obtain a foothold.,T1190
+4,Operators logged in using stolen credentials obtained from an earlier breach.,T1078
+5,The loader launched PowerShell with an encoded command to fetch the next stage.,T1059.001
+6,A batch file was dropped and run through cmd.exe to copy the implant into place.,T1059.003
+7,"To remain on the system, the malware wrote a value under the Run key so it started at every logon.",T1547.001
+8,The backdoor created a scheduled task using schtasks that executes every hour.,T1053.005
+9,The group installed the payload as a new Windows service named to resemble a system component.,T1543.003
+10,The shellcode was injected into explorer.exe to hide its activity from monitoring tools.,T1055
+11,The configuration blob is base64 encoded and further XOR encoded to hinder static analysis.,T1027
+12,The attackers dumped credentials from LSASS memory using a renamed copy of ProcDump.,T1003.001
+13,A password spraying attack was run against exposed mail accounts over several days.,T1110
+14,The implant records captured keystrokes and stores them in a local file.,T1056.001
+15,"It collects the computer name, OS version and installed patches and reports them to the server.",T1082
+16,The tool runs tasklist to enumerate running processes and look for security products.,T1057
+17,The intruders connected to servers over Remote Desktop to move laterally across the domain.,T1021.001
+18,Files were copied to the admin shares of neighboring hosts and run with PsExec.,T1021.002
+19,Documents of interest were compressed into a password protected RAR archive before leaving the network.,T1560
+20,The malware takes screenshots every few minutes and saves them to disk.,T1113
+21,Stolen data was uploaded to a Dropbox account controlled by the actors.,T1567
+22,The ransomware encrypts files and drops a ransom note in every folder.,T1486
+23,"Before encryption, the operators ran vssadmin to remove shadow copies so victims could not restore files.",T1490
+24,The sample uses certutil to download a second stage from a remote server.,T1105
+25,Command and control traffic is wrapped in HTTPS POST requests to blend in with normal web traffic.,T1071.001
+26,The malware queries domains produced by a domain generation algorithm to locate its server.,T1568
+27,The operators disabled Windows Defender through a registry change before deploying the payload.,T1562.001
+28,After execution the dropper removes itself from disk to hinder forensic analysis.,T1070.004
+29,"Employees opened the invoice attached to the email, which then silently launched a hidden script.",T1566.001
+30,The attackers walked through the network looking for other computers they could reach.,T1018
+31,The group abused a legitimate remote support tool already trusted in the environment to keep access.,T1219
+32,Operators covered their tracks by erasing the Windows event logs on the compromised hosts.,T1070
+33,The binary is named like a legitimate Windows utility and sits in a folder commonly used by the operating system.,T1036
+34,The malware checks for signs of analysis tools and halts if it detects it is running inside a lab environment.,T1497
